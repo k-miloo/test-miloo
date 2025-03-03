@@ -6,3 +6,4 @@ export const confirmPasswordInput = '//input[contains(@name, "confirmPassword")]
 export const registerBtn = '//button[contains(text(), "Register")]';
 export const successMessage = '//p[contains(@class, "text-green-500 mb-4")]';
 export const errorMessage = '//p[contains(@class, "text-red-500 text-sm mt-1")]';
+export const homePageHeader = '//h1[contains(@class, "text-2xl font-bold mb-6")]';

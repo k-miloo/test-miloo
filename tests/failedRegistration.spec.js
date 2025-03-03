@@ -6,7 +6,7 @@ const email = 'example@example.com';
 const password = 'Tokyo098123';
 const invalidPassword = 'ToKyo098123';
 
-test('Verify invalid confirm password error message', async ({ page }) => {
+test('Verify non-matching confirm password error message', async ({ page }) => {
 
     // Navigate to Home Page
   await page.goto('https://auth-home-task.vercel.app/');
@@ -19,7 +19,7 @@ test('Verify invalid confirm password error message', async ({ page }) => {
   await page.locator(selectors.emailInput).fill(email);
   await page.locator(selectors.passwordInput).fill(password);
 
-  // Fill in confirm password input with invalid data
+  // Fill in confirm password input with a non-matching password
   await page.locator(selectors.confirmPasswordInput).fill(invalidPassword);
 
   // Click on Register button 

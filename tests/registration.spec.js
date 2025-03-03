@@ -22,6 +22,9 @@ test('Verify registration form with valid credentials', async ({ page }) => {
   // Click on Register button 
   await page.locator(selectors.registerBtn).click();
 
+  // Verify redirection to Home page 
+  await expect(page.locator(selectors.homePageHeader)).toHaveText('Welcome to the Home Page!');
+
   // Verify the success message
   await expect(page.locator(selectors.successMessage)).toHaveText('You have registered successfully!');
 
